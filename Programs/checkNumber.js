@@ -7,7 +7,7 @@ function checkNum(num){
     else if(num>0){
         return `given number ${num} is positive` 
     }
-    return `given number ${num} is positive` 
+    return `given number ${num} is negative` 
     
 }
 
