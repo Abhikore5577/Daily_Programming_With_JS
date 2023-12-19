@@ -11,3 +11,8 @@ console.log(i)
     }
 }
 factors(45)
+
+
+
+
+

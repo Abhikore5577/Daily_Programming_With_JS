@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Number</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Guess the Number Game</h1>
+  <p>Try to guess the random number between 1 and 10.</p>
+  <input type="number" id="userGuess" placeholder="Enter your guess">
+  <button onclick="checkGuess()">Submit Guess</button>
+  <p id="message"></p>
+
+<script>
+  let getRandomNum=Math.floor(Math.random()*10) + 1;
+
+  function guessNum(){
+    let userGuess=document.getElementById('userGuess').value
+
+    if(userGuess===getRandomNum){
+      showMessage('Congratulations! You guessed the correct number.');
+      } else {
+        showMessage(`Sorry, the correct number was ${randomNumber}. Try again!`);
+      }
+    }
+    
+      function showMsg(message){
+        let msgEl=document.querySelector('#message')
+
+        msgEl.textContent=message;
+      }
+
+  
+</script>
+
+
+
+
+  </body>
+</html>
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Number</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Guess the Number Game</h1>
+  <p>Try to guess the random number between 1 and 10.</p>
+  <input type="number" id="userGuess" placeholder="Enter your guess">
+  <button onclick="checkGuess()">Submit Guess</button>
+  <p id="message"></p>
+
+  <script>
+    // Generate a random number between 1 and 10
+    const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+    function checkGuess() {
+      // Get the user's guess from the input field
+      const userGuess = document.getElementById('userGuess').value;
+
+      // Check if the guess is correct
+      if (userGuess == randomNumber) {
+        showMessage('Congratulations! You guessed the correct number.');
+      } else {
+        showMessage(`Sorry, the correct number was ${randomNumber}. Try again!`);
+      }
+    }
+
+    function showMessage(message) {
+      // Display the result message
+      const messageElement = document.getElementById('message');
+      messageElement.textContent = message;
+    }
+  </script>
+
+</body>
+</html> -->
